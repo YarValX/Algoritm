@@ -1,6 +1,7 @@
+package List;
+
 public class LinkedList {
 
-    // Класс узла списка
     static class Node {
         int data;
         Node next;
@@ -11,13 +12,11 @@ public class LinkedList {
         }
     }
 
-    // Метод для печати списка
     static void printList(Node head) {
         Node currNode = head;
 
         System.out.print("LinkedList: ");
 
-        // Проходимся по всем узлам списка и печатаем их значния
         while (currNode != null) {
             System.out.print(currNode.data + " ");
             currNode = currNode.next;
@@ -25,13 +24,11 @@ public class LinkedList {
         System.out.println("");
     }
 
-    // Метод для разворота списка
     static Node reverseList(Node head) {
         Node prevNode = null;
         Node currNode = head;
         Node nextNode = null;
 
-        // Проходимся по всем узлам списка и меняем ссылки на предыдущий элемент
         while (currNode != null) {
             nextNode = currNode.next;
             currNode.next = prevNode;
@@ -39,7 +36,6 @@ public class LinkedList {
             currNode = nextNode;
         }
 
-        // Новый головной узел списка - последний элемент старого списка
         head = prevNode;
 
         return head;
