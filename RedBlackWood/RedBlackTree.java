@@ -12,7 +12,7 @@ class RedBlackNode {
 }
 
 public class RedBlackTree {
-    private RedBlackNode root = null;
+    RedBlackNode root = null;
 
     public void add(int key) {
         if (root == null) {
@@ -35,7 +35,7 @@ public class RedBlackTree {
     }
 
     private RedBlackNode newNode() {
-        int key = 5;
+        int key = 12;
         RedBlackNode node = new RedBlackNode(key);
         node.isRed = true;
         return node;
@@ -168,5 +168,11 @@ public class RedBlackTree {
         } else {
             return findNode(node.right, key);
         }
+    }
+
+    public void insert(int i, int i1) {
+    }
+
+    public void print(RedBlackNode root) {
     }
 }
